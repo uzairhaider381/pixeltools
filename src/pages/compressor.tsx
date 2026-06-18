@@ -159,9 +159,15 @@ export default function CompressorPage() {
               <AdBanner slot="2233445566" format="rectangle" />
             </div>
           </div>
-          <div className="flex flex-col gap-3 mt-2">
-            <h2 className="text-xl font-semibold">When should you compress images?</h2>
-            <p className="text-sm text-muted-foreground">Compressing images reduces file size, which speeds up websites, reduces storage usage, and makes sharing easier. JPEG and WebP formats offer lossy compression (smaller files, slight quality loss), while PNG offers lossless compression (larger files, no quality loss).</p>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Image Compressor</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>File size is one of those things that sneaks up on you. You take a photo on your phone, it's 6MB, you send it to someone, their phone takes ten seconds to load it. Or you upload it to your site and suddenly your page speed score tanks. The compressor exists to fix that.</p>
+              <p>Drag your image in and move the quality slider. You'll see the before and after file sizes update in real time, along with a percentage showing how much smaller the output is. Most of the time you can push quality down to 70–75% and the image looks identical to the human eye. Below 50% you start seeing it. Above 85% you're barely saving anything.</p>
+              <p>There's no one-size-fits-all setting here. A photo with a lot of fine detail — hair, grass, fabric — compresses differently than a simple graphic or a screenshot. That's why the slider is there instead of just a button. Play with it.</p>
+              <p>The comparison view lets you put the original and compressed versions side by side. Zoom in if you're worried about quality loss. Usually you won't see any. When you're happy, hit download. The whole process takes about fifteen seconds.</p>
+              <p>Works on PNG, JPG, and WebP. For PNGs the size reduction can be dramatic — sometimes 60 or 70% smaller with zero visible loss. JPGs and WebPs tend to be more modest but still meaningful, especially for anyone paying attention to bandwidth or load times.</p>
+            </div>
           </div>
         </div>
       </div>

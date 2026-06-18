@@ -226,6 +226,16 @@ export default function WatermarkPage() {
               <AdBanner slot="8899001122" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Watermark Adder</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>Watermarking your work is a reasonable thing to do, especially if you're sharing images online that you'd rather not see reposted without credit. It's also useful for marking drafts, adding copyright notices to client deliverables, or branding photos before publishing them.</p>
+              <p>Upload an image and type the text you want to use — your name, your website, a copyright symbol, whatever makes sense. From there you've got a set of controls to make the watermark look the way you want. Font size, rotation angle (anywhere from -180 to 180 degrees, which lets you do the classic diagonal watermark), colour, and opacity.</p>
+              <p>Opacity is probably the most important setting. A watermark that's too dark overpowers the image. Too light and it's easy to ignore or edit out. Somewhere around 30–50% opacity usually hits the right balance — visible enough to deter reuse, subtle enough not to ruin the photo.</p>
+              <p>For positioning, you can place it in any corner, centred on the image, or tiled across the whole thing in a repeating grid pattern. The grid option is the most effective for protection — it's much harder to crop or clone-stamp out a watermark that covers the entire image. Single-corner placement is cleaner for professional presentations where you still want the image to look good.</p>
+              <p>Everything renders on a canvas in the browser. No file uploads, no server, no watermarks on your watermarking tool. Download the finished image when you're happy with how it looks.</p>
+            </div>
+          </div>
         </div>
       </div>
       <canvas ref={canvasRef} className="hidden" />

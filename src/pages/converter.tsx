@@ -167,6 +167,16 @@ export default function ConverterPage() {
               <AdBanner slot="4455667788" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Image Converter</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>Different situations call for different formats. WebP files are small and sharp, which is what you want for websites. PNGs are lossless and support transparency, which is what you want for logos and graphics. JPGs are universal and work literally everywhere, which is what you want when you just need something to open without issues.</p>
+              <p>The problem is you don't always have the right format. You've got a PNG and need a JPG. You've got a JPG and someone's asking for WebP. You could re-export from the original source, or you could just convert it in a few seconds here.</p>
+              <p>Upload the file, pick the format you want to convert to, adjust the quality if it's a JPG or WebP, and download. That's the whole process. The conversion happens locally in your browser using the canvas API, so it's fast and nothing gets sent to a server.</p>
+              <p>One thing to be aware of: if you're converting a PNG with a transparent background to JPG, the transparency will be replaced with white, because JPG doesn't support alpha channels. If you need to keep transparency, stick with PNG or WebP.</p>
+              <p>Quality settings matter more for some formats than others. WebP at 80% quality is usually indistinguishable from the original and notably smaller in file size. JPG at 90% is excellent for photography. PNG quality doesn't affect visual output the same way — it affects compression level, which changes file size but not what you see.</p>
+            </div>
+          </div>
         </div>
       </div>
       <canvas ref={canvasRef} className="hidden" />

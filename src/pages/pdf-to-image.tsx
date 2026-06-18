@@ -165,6 +165,16 @@ export default function PdfToImagePage() {
               <AdBanner slot="7788990011" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About PDF to Image</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>Sometimes you need to go the other direction. You've got a PDF and you need the pages as images — for a thumbnail, for a presentation, for a banner, for a social media post, because the design team asked for PNGs and all you have is a PDF.</p>
+              <p>Upload the document and select which page you want to convert. The tool renders it at 2x scale using a high-resolution viewport, which means the output is sharp enough for most uses even when you're scaling it up. Downloads as PNG.</p>
+              <p>This works well for things like extracting a diagram from a report, pulling a specific chart from a slide deck that was exported as PDF, grabbing the cover page as an image, or converting individual pages of a scanned document so they're easier to share or embed.</p>
+              <p>It's worth knowing what this tool is and what it isn't. It's a page renderer — it turns a PDF page into a pixel image at high resolution. It's not OCR. It doesn't extract the text as editable text, it captures the page as a visual. If you need the text content extracted, that's a different tool for a different job.</p>
+              <p>Everything runs in the browser using pdf.js, the same library that powers Firefox's built-in PDF viewer. It handles most standard PDFs reliably. Pages with complex layouts, embedded fonts, or vector graphics all render cleanly.</p>
+            </div>
+          </div>
         </div>
       </div>
       <canvas ref={canvasRef} className="hidden" />

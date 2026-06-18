@@ -270,6 +270,16 @@ export default function BackgroundRemoverPage() {
               <AdBanner slot="5566778899" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Background Remover</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>Removing a background is genuinely one of the more annoying tasks in image editing. The good tools cost money, the free ones either have limits or watermarks, and most of them send your images to a server somewhere. This one doesn't.</p>
+              <p>There are two ways to use it. The colour key method works best when the background is a single colour — a white studio backdrop, a green screen, a solid-coloured wall. Click the eye-dropper, tap the background colour on the image, and it becomes transparent. There's a tolerance slider so you can widen or narrow the selection to catch edge pixels or avoid pulling in parts of the subject you want to keep.</p>
+              <p>The manual eraser works when the background is complicated. It's a brush you paint directly on the image. Adjust the brush size, zoom in if you need precision, and erase what you don't want. It's slower but gives you full control.</p>
+              <p>For images with clean, simple backgrounds the colour key approach is fast. Twenty seconds and you're done. For more complex backgrounds it takes a bit more work, but you can get good results without any subscription or account.</p>
+              <p>The output is a PNG with a transparent background — the right format for placing the subject onto something else, whether that's a different background, a design, a presentation slide, or a product listing. Everything processes in your browser. The image stays on your device.</p>
+            </div>
+          </div>
         </div>
       </div>
       <canvas ref={canvasRef} className="hidden" />

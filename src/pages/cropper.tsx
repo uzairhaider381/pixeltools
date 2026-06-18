@@ -308,6 +308,16 @@ export default function CropperPage() {
               <AdBanner slot="3344556677" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Image Cropper</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>Sometimes an image is good except for one part of it. The subject is slightly off-centre. There's a distracting background on the left. The thumbnail needs to be square but the photo is landscape. Cropping is the simplest fix in image editing, and it shouldn't require opening a desktop app to do it.</p>
+              <p>Upload your image and a crop box appears over it. Drag the corners and edges to frame exactly what you want. You can also drag the whole box around to reposition it without resizing. When you've got the framing right, click crop.</p>
+              <p>The handles work at all eight points — corners and edges — so you have full control over the shape. The coordinates map back to the original image dimensions, not the scaled preview, which means you get clean output at full resolution even if your screen is showing a smaller version of the file.</p>
+              <p>This is genuinely useful for profile pictures, product photos, blog post thumbnails, screenshots you need to clean up before sharing, or any situation where you just want to cut out a section of an image without touching anything else. No filters, no adjustments, no distractions — just a clean crop.</p>
+              <p>Everything happens in the browser. No accounts, no uploads, no waiting. Open the tool, drag the box, download the result. The output matches whatever dimensions you selected, pixel for pixel.</p>
+            </div>
+          </div>
         </div>
       </div>
       <canvas ref={canvasRef} className="hidden" />

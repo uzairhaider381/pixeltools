@@ -164,19 +164,15 @@ export default function ResizerPage() {
                   <AdBanner slot="0987654321" format="rectangle" className="mt-2" />
                 </div>
               )}
-              <div className="mt-6 flex flex-col gap-4">
-                <h2 className="text-xl font-semibold text-foreground">How to resize an image</h2>
-                <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
-                  <li>Upload your image by dragging it onto the upload zone or clicking Browse Files.</li>
-                  <li>Set your desired width and height in pixels, or use the percentage slider to scale proportionally.</li>
-                  <li>Choose your output format — JPEG for photos, PNG for graphics with transparency, WebP for the web.</li>
-                  <li>Adjust the quality slider to balance file size and image clarity.</li>
-                  <li>Click Resize Image, then Download Image to save the result.</li>
-                </ol>
-                <h2 className="text-xl font-semibold text-foreground mt-4">Why resize images?</h2>
-                <p className="text-sm text-muted-foreground">Resizing images reduces file size and load time, which improves website performance and SEO rankings. Social media platforms require specific image dimensions — for example, profile pictures are typically 400×400 px, and Twitter header images are 1500×500 px.</p>
-                <h2 className="text-xl font-semibold text-foreground mt-4">Is my image uploaded anywhere?</h2>
-                <p className="text-sm text-muted-foreground">No. All image processing happens entirely inside your browser using the HTML5 Canvas API. Your image never leaves your device and is never sent to any server.</p>
+              <div className="mt-8 space-y-4 border-t pt-8">
+                <h2 className="text-xl font-bold">About Image Resizer</h2>
+                <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+                  <p>Resizing images sounds simple until you actually need to do it right. You've got a photo that's 4000 pixels wide, your website only needs 800, and suddenly you're downloading some sketchy app or wrestling with Photoshop just to scale one image down. That's what this tool is for.</p>
+                  <p>Drop your image in, type the dimensions you want, and you're done. If you want to keep the proportions intact — which you almost always do — just lock the aspect ratio and it'll figure out the other dimension for you. Or if you'd rather think in percentages, drag the slider to 50% and get half the size without doing any math.</p>
+                  <p>It works with PNG, JPG, and WebP. The output quality is good. No weird compression artifacts, no colour shifts. What goes in comes out the same, just smaller (or bigger if you need that).</p>
+                  <p>One thing worth knowing: this runs entirely in your browser. Nothing gets sent anywhere. You could do this on a plane with no wifi and it'd work the same. The file never leaves your device, which matters more than people realise when you're working with personal photos or client work.</p>
+                  <p>Photographers use this before emailing previews. Developers use it to prep assets before pushing to production. Designers use it to test how something looks at different sizes. It's not complicated, it's just useful — and it's free.</p>
+                </div>
               </div>
             </div>
             <div className="flex flex-col gap-6">

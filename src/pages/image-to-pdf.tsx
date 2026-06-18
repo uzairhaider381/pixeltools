@@ -226,6 +226,16 @@ export default function ImageToPdfPage() {
               <AdBanner slot="6677889900" format="rectangle" />
             </div>
           </div>
+          <div className="mt-8 space-y-4 border-t pt-8">
+            <h2 className="text-xl font-bold">About Image to PDF</h2>
+            <div className="text-muted-foreground text-sm space-y-4 leading-relaxed">
+              <p>There's always a moment where you have a handful of images that need to become one document. Scanned pages, photos of handwritten notes, product shots for a catalogue, before-and-after photos for a report. Whatever the situation, emailing six separate image files instead of one PDF feels wrong.</p>
+              <p>Upload your images and they appear as a queue of thumbnails. If the order isn't right, use the move buttons to rearrange them before converting. You can also remove any image from the queue if you added one by mistake.</p>
+              <p>Before generating the PDF, pick your settings. The page size options include A4, US Letter, and a fit-to-image option that uses the image's own dimensions instead of a standard size. Orientation can be portrait or landscape. You can also set margins if you want some breathing room around the images on each page.</p>
+              <p>When everything looks right, export to PDF. Each image gets its own page. The file downloads immediately.</p>
+              <p>This is useful for anything where you need images in a single shareable document — receipts, certificates, scanned forms, photo collections, portfolios. No size limits enforced by a server because there is no server. It runs in the browser, which means larger files take a bit longer to process but they do process.</p>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
