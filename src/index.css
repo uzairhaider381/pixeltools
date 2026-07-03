@@ -104,3 +104,12 @@
     font-size: 16px; /* Prevents iOS zoom on focus */
   }
 }
+
+@utility bg-grid-pattern {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+@utility bg-glow-blob {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.04) 60%, transparent 100%);
+}
