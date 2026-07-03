@@ -144,7 +144,7 @@ export default function ImageToPdfPage() {
               <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col items-center justify-center p-8 text-center"
                 onClick={() => fileInputRef.current?.click()}>
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4"><UploadCloud size={24} /></div>
-                <h3 className="text-md font-semibold mb-1">Upload images to convert</h3>
+                <div className="text-md font-semibold mb-1">Upload images to convert</div>
                 <p className="text-xs text-muted-foreground mb-4">Supports JPG, PNG, WebP</p>
                 <Button variant="outline" size="sm">Select Images</Button>
                 <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={handleFileChange} />
@@ -164,13 +164,13 @@ export default function ImageToPdfPage() {
                           <p className="text-xs text-muted-foreground">{index + 1}. Page</p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => moveImage(index, "up")} disabled={index === 0}>
+                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => moveImage(index, "up")} disabled={index === 0} aria-label="Move image up">
                             <ArrowUp size={16} />
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => moveImage(index, "down")} disabled={index === images.length - 1}>
+                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => moveImage(index, "down")} disabled={index === images.length - 1} aria-label="Move image down">
                             <ArrowDown size={16} />
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:bg-destructive/10" onClick={() => removeImage(img.id)}>
+                          <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:bg-destructive/10" onClick={() => removeImage(img.id)} aria-label="Remove image">
                             <X size={16} />
                           </Button>
                         </div>

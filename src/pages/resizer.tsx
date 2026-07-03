@@ -113,7 +113,7 @@ export default function ResizerPage() {
 
   return (
     <Layout>
-      <div className="p-6 md:p-10 flex justify-center">
+      <div className="p-4 md:p-10 flex justify-center">
         <div className="w-full max-w-5xl flex flex-col gap-8">
           <header className="flex flex-col gap-1">
             <h1 className="text-3xl font-bold tracking-tight text-foreground">Free Image Resizer</h1>
@@ -122,10 +122,10 @@ export default function ResizerPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 flex flex-col gap-6">
               {!originalImageUrl && (
-                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors duration-200 cursor-pointer flex flex-col items-center justify-center p-12 text-center h-[400px]"
+                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors duration-200 cursor-pointer flex flex-col items-center justify-center p-6 md:p-12 text-center min-h-[240px] md:h-[360px]"
                   onClick={() => fileInputRef.current?.click()} onDrop={handleDrop} onDragOver={(e) => { e.preventDefault(); e.stopPropagation(); }}>
                   <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6"><UploadCloud size={32} /></div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Drag and drop an image</h3>
+                  <div className="text-lg font-semibold text-foreground mb-2">Drag and drop an image</div>
                   <p className="text-sm text-muted-foreground mb-6">Supports JPG, PNG, WebP, GIF</p>
                   <Button variant="outline">Browse Files</Button>
                   <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/jpeg,image/png,image/webp,image/gif" className="hidden" />
@@ -138,7 +138,7 @@ export default function ResizerPage() {
                     <Button variant="ghost" size="sm" onClick={() => { setFile(null); setOriginalImageUrl(null); }}>Change Image</Button>
                   </div>
                   <Card className="p-4 bg-muted/10 overflow-hidden flex flex-col gap-4">
-                    <div className="relative w-full h-[300px] bg-muted/30 rounded-md border border-border flex items-center justify-center overflow-hidden">
+                    <div className="relative w-full h-[200px] md:h-[300px] bg-muted/30 rounded-md border border-border flex items-center justify-center overflow-hidden">
                       <img src={originalImageUrl} alt="Original" className="max-w-full max-h-full object-contain" />
                     </div>
                     <div className="flex items-center justify-between text-sm text-muted-foreground px-2">
@@ -152,7 +152,7 @@ export default function ResizerPage() {
                 <div className="flex flex-col gap-4 mt-2">
                   <h2 className="text-lg font-semibold text-primary flex items-center gap-2"><Download size={20} />Resized Result</h2>
                   <Card className="p-4 border-primary/20 bg-primary/5 overflow-hidden flex flex-col gap-4">
-                    <div className="relative w-full h-[300px] bg-background/50 rounded-md border border-primary/10 flex items-center justify-center overflow-hidden">
+                    <div className="relative w-full h-[200px] md:h-[300px] bg-background/50 rounded-md border border-primary/10 flex items-center justify-center overflow-hidden">
                       <img src={resizedImageUrl} alt="Resized" className="max-w-full max-h-full object-contain" />
                     </div>
                     <div className="flex items-center justify-between text-sm px-2">

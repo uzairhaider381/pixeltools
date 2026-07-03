@@ -17,46 +17,56 @@ export default function HomePage() {
   ];
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-16 flex flex-col items-center">
-        <div className="text-center max-w-3xl mb-16">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+      <div className="container mx-auto px-4 py-10 md:py-16 flex flex-col items-center">
+
+        {/* Hero */}
+        <div className="text-center max-w-3xl mb-10 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 md:mb-6 leading-tight">
             Free Online Image Tools
           </h1>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 px-2">
             Resize, compress, crop, convert, and more — all in your browser. Private and instant.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/resize">
-              <Button size="lg" className="text-lg px-8">Get Started</Button>
+              <Button size="lg" className="w-full sm:w-auto text-base px-8">Get Started</Button>
             </Link>
-            <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => document.getElementById("tools")?.scrollIntoView({ behavior: "smooth" })}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto text-base px-8"
+              onClick={() => document.getElementById("tools")?.scrollIntoView({ behavior: "smooth" })}
+            >
               View All Tools
             </Button>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 mb-16 max-w-4xl w-full">
+
+        {/* Trust badges */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10 md:mb-16 max-w-3xl w-full">
           {["100% Private — No uploads", "Completely Free", "Works in Any Browser"].map(badge => (
-            <div key={badge} className="bg-muted/50 px-4 py-2 rounded-full text-sm font-medium border border-border/50">
+            <div key={badge} className="bg-muted/50 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium border border-border/50">
               {badge}
             </div>
           ))}
         </div>
-        <div id="tools" className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mb-16">
+
+        {/* Tools grid — 1 col mobile, 2 col tablet+ */}
+        <div id="tools" className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-5xl mb-10 md:mb-16">
           {tools.map(({ href, label, desc, icon: Icon }) => (
-            <div key={href} className="group flex flex-col bg-card border rounded-xl p-6 hover:shadow-md transition-all hover:border-primary/50">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <Icon size={24} />
-                </div>
-                <h3 className="text-xl font-semibold">{label}</h3>
+            <Link key={href} href={href} className="group flex items-start gap-4 bg-card border rounded-xl p-4 md:p-6 hover:shadow-md transition-all hover:border-primary/50 active:scale-[0.98]">
+              <div className="p-2.5 md:p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex-shrink-0">
+                <Icon size={22} />
               </div>
-              <p className="text-muted-foreground flex-1 mb-4">{desc}</p>
-              <Link href={href} className="text-primary font-medium hover:underline inline-flex items-center gap-1 w-max">
-                Use Tool →
-              </Link>
-            </div>
+              <div className="flex flex-col min-w-0">
+                <h2 className="text-base md:text-lg font-semibold mb-1">{label}</h2>
+                <p className="text-sm text-muted-foreground">{desc}</p>
+                <span className="text-primary text-sm font-medium mt-2 group-hover:underline">Use Tool →</span>
+              </div>
+            </Link>
           ))}
         </div>
+
         <div className="w-full max-w-5xl">
           <AdBanner slot="1122334455" format="rectangle" />
         </div>

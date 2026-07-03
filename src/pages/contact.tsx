@@ -143,7 +143,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 animate-bounce">
                   <Send size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Message Sent!</h3>
+                <div className="text-xl font-bold text-primary mb-2">Message Sent!</div>
                 <p className="text-sm text-muted-foreground max-w-xs">
                   Thank you for reaching out. We will read your message and reply as soon as possible.
                 </p>

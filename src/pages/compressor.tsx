@@ -72,7 +72,7 @@ export default function CompressorPage() {
 
   return (
     <Layout>
-      <div className="p-6 md:p-10 flex justify-center">
+      <div className="p-4 md:p-10 flex justify-center">
         <div className="w-full max-w-5xl flex flex-col gap-8">
           <header className="flex flex-col gap-1">
             <h1 className="text-3xl font-bold tracking-tight">Image Compressor</h1>
@@ -81,12 +81,12 @@ export default function CompressorPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 flex flex-col gap-6">
               {!originalUrl && (
-                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col items-center justify-center p-12 text-center h-[400px]"
+                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col items-center justify-center p-6 md:p-12 text-center min-h-[240px] md:h-[360px]"
                   onClick={() => fileInputRef.current?.click()}
                   onDrop={(e) => { e.preventDefault(); e.dataTransfer.files[0] && loadImage(e.dataTransfer.files[0]); }}
                   onDragOver={(e) => e.preventDefault()}>
                   <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6"><UploadCloud size={32} /></div>
-                  <h3 className="text-lg font-semibold mb-2">Drag and drop an image</h3>
+                  <div className="text-lg font-semibold mb-2">Drag and drop an image</div>
                   <p className="text-sm text-muted-foreground mb-6">Supports JPG, PNG, WebP</p>
                   <Button variant="outline">Browse Files</Button>
                   <input ref={fileInputRef} type="file" accept="image/jpeg,image/png,image/webp" className="hidden" onChange={(e) => e.target.files?.[0] && loadImage(e.target.files[0])} />
@@ -99,7 +99,7 @@ export default function CompressorPage() {
                     <Button variant="ghost" size="sm" onClick={() => { setFile(null); setOriginalUrl(null); setResultUrl(null); }}>Change Image</Button>
                   </div>
                   <Card className="p-4 bg-muted/10 flex flex-col gap-4">
-                    <div className="w-full h-[260px] bg-muted/30 rounded-md border flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-[180px] md:h-[260px] bg-muted/30 rounded-md border flex items-center justify-center overflow-hidden">
                       <img src={originalUrl} alt="Original" className="max-w-full max-h-full object-contain" />
                     </div>
                     <div className="flex justify-between text-sm text-muted-foreground px-2">

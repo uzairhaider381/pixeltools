@@ -83,10 +83,24 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  /* Minimum touch target size for all interactive elements */
+  button, a, input[type="range"], select {
+    min-height: 44px;
+  }
+  input[type="number"], input[type="text"], input[type="email"], textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
   }
 }

@@ -148,7 +148,7 @@ export default function WatermarkPage() {
                   onDrop={(e) => { e.preventDefault(); e.dataTransfer.files[0] && loadImage(e.dataTransfer.files[0]); }}
                   onDragOver={(e) => e.preventDefault()}>
                   <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6"><UploadCloud size={32} /></div>
-                  <h3 className="text-lg font-semibold mb-2">Drag and drop an image</h3>
+                  <div className="text-lg font-semibold mb-2">Drag and drop an image</div>
                   <p className="text-sm text-muted-foreground mb-6">Supports JPG, PNG, WebP</p>
                   <Button variant="outline">Browse Files</Button>
                   <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={(e) => e.target.files?.[0] && loadImage(e.target.files[0])} />

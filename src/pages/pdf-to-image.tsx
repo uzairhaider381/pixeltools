@@ -107,12 +107,12 @@ export default function PdfToImagePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 flex flex-col gap-6">
               {!file && (
-                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col items-center justify-center p-12 text-center h-[350px]"
+                <Card className="border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col items-center justify-center p-8 md:p-16 text-center min-h-[300px] md:min-h-[400px]"
                   onClick={() => fileInputRef.current?.click()}
                   onDrop={(e) => { e.preventDefault(); e.dataTransfer.files[0] && loadPdf(e.dataTransfer.files[0]); }}
                   onDragOver={(e) => e.preventDefault()}>
                   <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6"><UploadCloud size={32} /></div>
-                  <h3 className="text-lg font-semibold mb-2">Drag and drop a PDF file</h3>
+                  <div className="text-lg font-semibold mb-2">Drag and drop a PDF file</div>
                   <p className="text-sm text-muted-foreground mb-6">Process pages in high-resolution locally</p>
                   <Button variant="outline">Browse Files</Button>
                   <input ref={fileInputRef} type="file" accept="application/pdf" className="hidden" onChange={(e) => e.target.files?.[0] && loadPdf(e.target.files[0])} />
