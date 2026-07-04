@@ -135,6 +135,19 @@ export default function HomePage() {
           ))}
         </div>
 
+        {/* Blog Banner */}
+        <div className="w-full max-w-5xl mb-12 bg-card/60 backdrop-blur-md border border-border/80 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_8px_30px_-5px_rgba(139,92,246,0.1)]">
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-bold text-foreground mb-2">📖 Want to learn more?</h3>
+            <p className="text-muted-foreground">Check out our Blog for image editing tips, guides, and tutorials.</p>
+          </div>
+          <Link href="/blog">
+            <Button size="lg" className="bg-gradient-to-r from-violet-600 to-primary hover:opacity-95 shadow-md shadow-primary/20">
+              Read the Blog
+            </Button>
+          </Link>
+        </div>
+
         <div className="w-full max-w-5xl">
           <AdBanner slot="1122334455" format="rectangle" />
         </div>
