@@ -1,0 +1,18 @@
+# PixelTools
+
+> Free, private, browser-based image editing tools.
+
+## Tools
+- Resize: Resize images to any dimension
+- Compress: Reduce image file size
+- Crop: Crop images to custom sizes
+- Convert: Convert between JPG, PNG, WebP
+- Remove BG: Remove image backgrounds
+- Watermark: Add watermarks to images
+- Image to PDF: Combine images into a PDF document
+- PDF to Image: Convert PDF pages to downloadable images
+
+## Notes
+- All processing is done client-side
+- No images are uploaded to any server
+- Free to use, no account required

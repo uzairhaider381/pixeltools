@@ -91,7 +91,7 @@ export default function HomePage() {
                 <Icon size={22} className="stroke-[2]" />
               </div>
               <div className="flex flex-col min-w-0">
-                <h2 className="text-base md:text-lg font-semibold mb-1 text-foreground/90 group-hover:text-foreground transition-colors">{label}</h2>
+                <h3 className="text-base md:text-lg font-semibold mb-1 text-foreground/90 group-hover:text-foreground transition-colors">{label}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
                 <span className="text-primary text-sm font-semibold mt-3 flex items-center gap-1 group-hover:underline">
                   Use Tool{" "}
