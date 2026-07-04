@@ -6,7 +6,7 @@ export const posts1: BlogPost[] = [
     slug: "compress-images-without-losing-quality",
     title: "How to Compress Images Without Losing Quality",
     description: "Learn the best techniques to reduce image file sizes while keeping your photos sharp and crisp. A practical guide for designers, developers, and everyday users.",
-    date: "June 26, 2026",
+    date: "June 15, 2026",
     readTime: "6 min read",
     category: "Guides",
     content: `
@@ -65,7 +65,7 @@ export const posts1: BlogPost[] = [
     slug: "jpg-vs-png-vs-webp",
     title: "JPG vs PNG vs WebP — Which Format Should You Use?",
     description: "Not all image formats are created equal. Understand the strengths and weaknesses of each format so you always choose the right one for the job.",
-    date: "June 27, 2026",
+    date: "June 17, 2026",
     readTime: "7 min read",
     category: "Guides",
     content: `
@@ -118,7 +118,7 @@ export const posts1: BlogPost[] = [
     slug: "resize-images-for-social-media",
     title: "How to Resize Images for Instagram, Twitter and LinkedIn",
     description: "Every social media platform has different image size requirements. This guide gives you the exact dimensions you need and shows you how to resize quickly.",
-    date: "June 28, 2026",
+    date: "June 18, 2026",
     readTime: "5 min read",
     category: "Social Media",
     content: `
@@ -158,7 +158,7 @@ export const posts1: BlogPost[] = [
     slug: "what-is-image-dpi",
     title: "What is Image DPI and Why Does It Matter?",
     description: "DPI is one of those terms that confuses a lot of people. Here's a clear, practical explanation of what it is, when it matters, and when it doesn't.",
-    date: "June 29, 2026",
+    date: "June 20, 2026",
     readTime: "6 min read",
     category: "Concepts",
     content: `
@@ -204,7 +204,7 @@ export const posts1: BlogPost[] = [
     slug: "remove-background-from-images-free",
     title: "How to Remove Background from Images for Free",
     description: "Background removal doesn't have to cost money or require Photoshop. Here's how to do it right in your browser using completely free tools.",
-    date: "June 30, 2026",
+    date: "June 22, 2026",
     readTime: "5 min read",
     category: "Tutorials",
     content: `

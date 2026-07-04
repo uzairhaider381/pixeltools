@@ -6,7 +6,7 @@ export const posts2: BlogPost[] = [
     slug: "best-ways-to-crop-images-online",
     title: "Best Ways to Crop Images Online",
     description: "Cropping is one of the most used photo editing actions — and one of the most misunderstood. Here's how to crop with precision using free online tools.",
-    date: "July 1, 2026",
+    date: "June 23, 2026",
     readTime: "5 min read",
     category: "Tutorials",
     content: `
@@ -54,7 +54,7 @@ export const posts2: BlogPost[] = [
     slug: "convert-images-to-pdf-online",
     title: "How to Convert Images to PDF Online",
     description: "Need to turn your photos or screenshots into a single PDF document? Here's the quickest way to do it without installing any software.",
-    date: "July 2, 2026",
+    date: "June 25, 2026",
     readTime: "4 min read",
     category: "Tutorials",
     content: `
@@ -99,7 +99,7 @@ export const posts2: BlogPost[] = [
     slug: "what-is-image-compression",
     title: "What is Image Compression and How Does It Work?",
     description: "Image compression is everywhere — in every photo you take, every website you visit. This article explains the technology behind it in plain language.",
-    date: "July 3, 2026",
+    date: "June 27, 2026",
     readTime: "7 min read",
     category: "Concepts",
     content: `
@@ -134,7 +134,7 @@ export const posts2: BlogPost[] = [
     slug: "how-to-add-watermark-to-images",
     title: "How to Add a Watermark to Your Images",
     description: "Watermarking protects your creative work online. Learn how to add professional-looking watermarks to your images without expensive software.",
-    date: "July 4, 2026",
+    date: "June 29, 2026",
     readTime: "5 min read",
     category: "Tutorials",
     content: `
@@ -178,7 +178,7 @@ export const posts2: BlogPost[] = [
     slug: "top-free-online-image-tools-2026",
     title: "Top Free Online Image Tools in 2026",
     description: "A curated roundup of the best free, browser-based image tools available today — for resizing, compressing, converting, cropping, and more.",
-    date: "July 5, 2026",
+    date: "July 1, 2026",
     readTime: "8 min read",
     category: "Resources",
     content: `
