@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X, Lock, Shield } from "lucide-react";
 import { useState } from "react";
+import CookieConsent from "./CookieConsent";
 // import AdBanner from "./AdBanner"; // Disabled until AdSense approved
 
 const LogoIcon = () => (
@@ -64,6 +65,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <Link href="/about" className={location === "/about" ? "text-primary" : "text-muted-foreground hover:text-primary transition-colors"}>About</Link>
+            <Link href="/blog" className={location === "/blog" || location.startsWith("/blog/") ? "text-primary" : "text-muted-foreground hover:text-primary transition-colors"}>Blog</Link>
             <Link href="/contact" className={location === "/contact" ? "text-primary" : "text-muted-foreground hover:text-primary transition-colors"}>Contact</Link>
           </nav>
 
@@ -90,6 +92,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
             </div>
             <Link href="/about" className="px-3 py-3 rounded-md font-medium hover:bg-muted transition-colors" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/blog" className="px-3 py-3 rounded-md font-medium hover:bg-muted transition-colors" onClick={() => setIsOpen(false)}>Blog</Link>
             <Link href="/contact" className="px-3 py-3 rounded-md font-medium hover:bg-muted transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
         )}
@@ -130,6 +133,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <h4 className="font-semibold mb-3 text-sm">Company</h4>
             <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -167,6 +171,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           © 2026 PixelTools. All rights reserved.
         </div>
       </footer>
+      <CookieConsent />
     </div>
   );
 }

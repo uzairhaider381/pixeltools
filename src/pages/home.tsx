@@ -36,6 +36,37 @@ export default function HomePage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://pixeltools.online/#website",
+                url: "https://pixeltools.online",
+                name: "PixelTools",
+                description: "Free online image tools suite.",
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://pixeltools.online/#webapp",
+                name: "PixelTools",
+                url: "https://pixeltools.online",
+                applicationCategory: "MultimediaApplication",
+                operatingSystem: "All",
+                browserRequirements: "Requires JavaScript",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <div className="container mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
 
         {/* Hero Section */}

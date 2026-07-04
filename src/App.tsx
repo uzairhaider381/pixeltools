@@ -17,6 +17,17 @@ const AboutPage = lazy(() => import("@/pages/about"));
 const ContactPage = lazy(() => import("@/pages/contact"));
 const PrivacyPage = lazy(() => import("@/pages/privacy"));
 const TermsPage = lazy(() => import("@/pages/terms"));
+const BlogPage = lazy(() => import("@/pages/blog"));
+const BlogPost1 = lazy(() => import("@/pages/blog/compress-images-without-losing-quality"));
+const BlogPost2 = lazy(() => import("@/pages/blog/jpg-vs-png-vs-webp"));
+const BlogPost3 = lazy(() => import("@/pages/blog/resize-images-for-social-media"));
+const BlogPost4 = lazy(() => import("@/pages/blog/what-is-image-dpi"));
+const BlogPost5 = lazy(() => import("@/pages/blog/remove-background-from-images-free"));
+const BlogPost6 = lazy(() => import("@/pages/blog/best-ways-to-crop-images-online"));
+const BlogPost7 = lazy(() => import("@/pages/blog/convert-images-to-pdf-online"));
+const BlogPost8 = lazy(() => import("@/pages/blog/what-is-image-compression"));
+const BlogPost9 = lazy(() => import("@/pages/blog/how-to-add-watermark-to-images"));
+const BlogPost10 = lazy(() => import("@/pages/blog/top-free-online-image-tools-2026"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 const PageLoader = () => (
@@ -42,6 +53,17 @@ function Router() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/privacy" component={PrivacyPage} />
         <Route path="/terms" component={TermsPage} />
+        <Route path="/blog" component={BlogPage} />
+        <Route path="/blog/compress-images-without-losing-quality" component={BlogPost1} />
+        <Route path="/blog/jpg-vs-png-vs-webp" component={BlogPost2} />
+        <Route path="/blog/resize-images-for-social-media" component={BlogPost3} />
+        <Route path="/blog/what-is-image-dpi" component={BlogPost4} />
+        <Route path="/blog/remove-background-from-images-free" component={BlogPost5} />
+        <Route path="/blog/best-ways-to-crop-images-online" component={BlogPost6} />
+        <Route path="/blog/convert-images-to-pdf-online" component={BlogPost7} />
+        <Route path="/blog/what-is-image-compression" component={BlogPost8} />
+        <Route path="/blog/how-to-add-watermark-to-images" component={BlogPost9} />
+        <Route path="/blog/top-free-online-image-tools-2026" component={BlogPost10} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
