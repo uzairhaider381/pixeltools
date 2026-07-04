@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X, Lock, Shield } from "lucide-react";
 import { useState } from "react";
-import AdBanner from "./AdBanner";
+// import AdBanner from "./AdBanner"; // Disabled until AdSense approved
 
 const LogoIcon = () => (
   <svg
@@ -95,12 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         )}
       </header>
 
-      {/* Top ad bar - below header */}
-      <div className="w-full bg-muted/10 border-b flex justify-center py-2.5 px-4">
-        <div className="w-full max-w-5xl">
-          <AdBanner slot="9988776655" format="horizontal" />
-        </div>
-      </div>
+      {/* Top ad bar - disabled until AdSense approved */}
 
       <main className="flex-1 w-full relative overflow-hidden">
         {/* Decorative Grid Background */}

@@ -7,17 +7,53 @@
     <title>PixelTools - Free Online Image Tools</title>
     <meta name="description" content="Free browser-based image tools. Resize, compress, crop, convert images instantly. No uploads, 100% private.">
     <meta name="keywords" content="image resizer, image compressor, crop image, convert image, free image tools">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="PixelTools - Free Image Tools"/>
     <meta property="og:description" content="Free, fast and private image editing tools"/>
     <meta property="og:image" content="/thumbnail.png"/>
     <meta property="og:url" content="https://pixeltools.online"/>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="preconnect" href="https://ep1.adtrafficquality.google" />
+
+    <!-- Initial loader styles -->
+    <style>
+      #initial-loader {
+        position: fixed; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        background: white; z-index: 9999;
+      }
+      .spinner {
+        width: 36px; height: 36px;
+        border: 4px solid #e9d5ff;
+        border-top-color: #7c3aed;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+
     <!-- Google AdSense - Replace client with real ca-pub-XXXXXXXXXXXXXXXX when active -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
   </head>
   <body>
+    <div id="initial-loader">
+      <div class="spinner"></div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      // Hide loader once React mounts
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('initial-loader')
+        if (loader) loader.style.display = 'none'
+      })
+    </script>
   </body>
 </html>
